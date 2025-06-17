@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f4f4f4;
+}
+
+header.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 60px;
+}
+
+.titulo {
+  font-size: 24px;
+  color: #333;
+  margin-left: 20px;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.instrucciones {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+
+.formulario {
+  background: #fff;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  background-color: #4285F4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #357ae8;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  margin-right: 10px;
+  background: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-group label:hover {
+  background: #e0e0e0;
+}
+
+.tabla-evaluacion {
+  display: grid;
+  grid-template-columns: 220px repeat(5, 60px); 
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.fila {
+  display: contents; 
+}
+
+.fila:not(.encabezado):hover {
+  background-color: #f0f0f0; /* Color de fondo suave */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.fila.encabezado div {
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.fila .aspecto {
+  text-align: left;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.fila div {
+  text-align: center;
+}
+
+input[type="radio"] {
+  transform: scale(1.3); /* radios más grandes */
+}
+
+.instruccion-evaluacion {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .tabla-evaluacion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .fila {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .fila .aspecto {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .fila div {
+    width: auto;
+    text-align: left;
+    margin: 5px 0;
+  }
+
+  .fila.encabezado {
+    display: none; /* Ocultamos el encabezado 1 2 3 4 5 en celular */
+  }
+
+  .fila:not(.encabezado):hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+}
+
+

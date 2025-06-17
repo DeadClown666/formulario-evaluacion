@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluación de Instructores</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <img src="images/logo.png" alt="Logo" class="logo">
+  <h1 class="titulo">Formulario de Evaluación de Instructores</h1>
+</header>
+
+<p class="instrucciones">
+  Por favor, complete el siguiente formulario evaluando de manera honesta y objetiva al instructor de su curso. Sus respuestas son confidenciales y serán utilizadas únicamente con fines de mejora académica.
+</p>
+
+<div class="formulario">
+  <form id="evaluacion-form">
+    <div id="bloque-1">
+    <!-- Programa -->
+    <label for="programa">Programa:</label>
+    <select id="programa" name="programa" required>
+      <option value="">Seleccione un programa</option>
+      <option value="Nivelación Pedagógica">Nivelación Pedagógica</option>
+      <option value="Capacitación Primaria">Capacitación Primaria</option>
+    </select>
+
+    <!-- Modalidad -->
+    <div id="div-modalidad" style="display: none;">
+      <label for="modalidad">Modalidad:</label>
+      <select id="modalidad" name="modalidad" required></select>
+    </div>
+
+    <!-- Grupo -->
+    <div id="div-grupo" style="display: none;">
+      <label for="grupo">Grupo:</label>
+      <select id="grupo" name="grupo" required></select>
+    </div>
+
+    <!-- Horario -->
+    <div id="div-horario" style="display: none;">
+      <label for="horario">Horario:</label>
+      <select id="horario" name="horario" required></select>
+    </div>
+
+    <!-- Curso -->
+    <div id="div-curso" style="display: none;">
+      <label for="curso">Curso:</label>
+      <select id="curso" name="curso" required></select>
+    </div>
+
+    <!-- Docente -->
+    <div id="div-docente" style="display: none;">
+      <label for="docente">Docente:</label>
+      <select id="docente" name="docente" required></select>
+    </div>
+    
+    <!-- Evaluación -->
+<div id="evaluacion-instructor" style="display: none;">
+  <h3>Evaluación del Instructor</h3>
+
+  <p class="instruccion-evaluacion">
+    Califica del 1 al 5, donde 1 es pésimo y 5 excelente, los siguientes aspectos:
+  </p>
+
+  <div class="tabla-evaluacion">
+    <div class="fila encabezado">
+      <div class="aspecto"></div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+
+    <div class="fila">
+      <div class="aspecto">Manejo de la materia:</div>
+      <div><input type="radio" name="manejo-materia" value="1" required></div>
+      <div><input type="radio" name="manejo-materia" value="2"></div>
+      <div><input type="radio" name="manejo-materia" value="3"></div>
+      <div><input type="radio" name="manejo-materia" value="4"></div>
+      <div><input type="radio" name="manejo-materia" value="5"></div>
+    </div>
+
+    <div class="fila">
+      <div class="aspecto">Claridad al impartir la clase:</div>
+      <div><input type="radio" name="claridad-clase" value="1" required></div>
+      <div><input type="radio" name="claridad-clase" value="2"></div>
+      <div><input type="radio" name="claridad-clase" value="3"></div>
+      <div><input type="radio" name="claridad-clase" value="4"></div>
+      <div><input type="radio" name="claridad-clase" value="5"></div>
+    </div>
+  </div>
+</div>
+<button type="button" id="btn-siguiente">Siguiente</button>
+</div>
+
+<div id="bloque-2" style="display: none;">
+  <h3>Temas de Interés</h3>
+
+  <label for="interes1">Tema de interés 1:</label>
+  <select id="interes1" name="interes1" required>
+    <option value="">Seleccione un tema</option>
+    <option value="Pedagogía Moderna">Pedagogía Moderna</option>
+    <option value="Tecnologías Educativas">Tecnologías Educativas</option>
+    <option value="Psicología Infantil">Psicología Infantil</option>
+    <option value="Evaluación Educativa">Evaluación Educativa</option>
+    <option value="Innovación Didáctica">Innovación Didáctica</option>
+    <!-- Agrega más temas aquí -->
+  </select>
+
+  <label for="interes2">Tema de interés 2:</label>
+  <select id="interes2" name="interes2" required>
+    <option value="">Seleccione un tema</option>
+    <option value="Pedagogía Moderna">Pedagogía Moderna</option>
+    <option value="Tecnologías Educativas">Tecnologías Educativas</option>
+    <option value="Psicología Infantil">Psicología Infantil</option>
+    <option value="Evaluación Educativa">Evaluación Educativa</option>
+    <option value="Innovación Didáctica">Innovación Didáctica</option>
+  </select>
+
+  <label for="interes3">Tema de interés 3:</label>
+  <select id="interes3" name="interes3" required>
+    <option value="">Seleccione un tema</option>
+    <option value="Pedagogía Moderna">Pedagogía Moderna</option>
+    <option value="Tecnologías Educativas">Tecnologías Educativas</option>
+    <option value="Psicología Infantil">Psicología Infantil</option>
+    <option value="Evaluación Educativa">Evaluación Educativa</option>
+    <option value="Innovación Didáctica">Innovación Didáctica</option>
+  </select>
+
+  <label for="comentarios">Comentarios adicionales:</label>
+  <textarea id="comentarios" name="comentarios" rows="5" placeholder="Escriba sus comentarios aquí..."></textarea>
+
+  <button type="submit">Enviar Evaluación</button>
+</div>
+  </form>
+
+<div id="mensaje-confirmacion" style="display: none; text-align: center; margin-top: 20px;">
+  <h2>¡Gracias! Tu evaluación ha sido enviada con éxito.</h2>
+  <button onclick="cerrarPagina()" style="margin-top: 15px; padding: 10px 20px; font-size: 16px;">Cerrar página</button>
+</div>
+</body>
+
+<script type="module" src="app.js"></script>
+</html>
